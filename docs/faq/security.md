@@ -140,7 +140,7 @@ keadm join --cloudcore-ipport=<cloudcore-ip>:10000 --token=<new-token>
 
 This generates fresh certificates for the edge node.
 
-If you need to rotate the CA itself (the root CA on the cloud side), that's more involved and requires regenerating all edge node certificates. Usually you only need to do this if the CA is compromized.
+If you need to rotate the CA itself (the root CA on the cloud side), that's more involved and requires regenerating all edge node certificates. Usually you only need to do this if the CA is compromised.
 
 ## CloudCore logs show certificate errors
 

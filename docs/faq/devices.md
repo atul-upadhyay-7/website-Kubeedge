@@ -18,7 +18,7 @@ metadata:
 spec:
   properties:
     - name: temperature
-      description: temperature in degree celsius
+      description: temperature in degrees Celsius
       type: float
       accessMode: ReadOnly
       defaultValue: 0.0
@@ -38,7 +38,7 @@ spec:
   nodeSelector:
     nodeSelectorTerms:
       - matchExpressions:
-          - key: ''
+          - key: kubernetes.io/hostname
             operator: In
             values:
               - edge-node-01
@@ -172,7 +172,7 @@ spec:
   nodeSelector:
     nodeSelectorTerms:
       - matchExpressions:
-          - key: ''
+          - key: kubernetes.io/hostname
             operator: In
             values:
               - factory-floor-node
@@ -189,7 +189,7 @@ spec:
   nodeSelector:
     nodeSelectorTerms:
       - matchExpressions:
-          - key: ''
+          - key: kubernetes.io/hostname
             operator: In
             values:
               - factory-floor-node

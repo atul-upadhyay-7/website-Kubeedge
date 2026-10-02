@@ -17,7 +17,7 @@ Okay so technically KubeEdge runs on top of Kubernetes, but there are some prett
 
 **1. EdgeCore is way lighter than kubelet**
 
-Standard kubelet is a chunky binary. EdgeCore is built to run on devices with limited resources - we're talking less than 70MB of RAM. It combines a bunch of components (container runtime, volume management, device twin syncronization) into one small binary. I've seen it run on Raspberry Pi Zeros without issues.
+Standard kubelet is a chunky binary. EdgeCore is built to run on devices with limited resources - we're talking less than 70MB of RAM. It combines a bunch of components (container runtime, volume management, device twin synchronization) into one small binary. I've seen it run on Raspberry Pi Zeros without issues.
 
 **2. It actually works offline**
 
@@ -60,7 +60,7 @@ KubeEdge has this whole CRD system for managing IoT devices directly through Kub
 
 Honestly, the use cases are pretty broad, but here's where I see it most:
 
-- **Manufacturing**: Real-time monitoring of production lines, predictive maintainence. One factory I know of uses it to monitor 500+ sensors on their assembly line.
+- **Manufacturing**: Real-time monitoring of production lines, predictive maintenance. One factory I know of uses it to monitor 500+ sensors on their assembly line.
 - **Smart cities**: Traffic monitoring, license plate recognition, toll systems. The low latency matters here.
 - **Energy**: Wind turbine monitoring, solar panel management. These sites often have terrible connectivity, so the offline autonomy is crucial.
 - **Edge AI**: Running ML inference locally instead of sending data to the cloud. Think camera-based quality inspection on a factory floor.
@@ -85,7 +85,7 @@ EdgeCore is designed to be super lightweight:
 
 - **CPU architectures**: x86_64, ARMv7 (32-bit ARM), ARMv8 (64-bit ARM), and RISC-V
 - **RAM**: The binary itself uses less than 70MB. I'd recommend at least 128MB total on your device to be safe.
-- **Disk**: Around 100MB for the binary plus the SQLite database (which grows over time dependig on how many pods you run)
+- **Disk**: Around 100MB for the binary plus the SQLite database (which grows over time depending on how many pods you run)
 
 Practically speaking, it runs fine on:
 - Raspberry Pi 3/4 (2GB+ recommended)
@@ -116,4 +116,4 @@ The version output looks like:
 KubeEdge v1.14.0 CloudCore
 ```
 
-Make sure your cloud and edge components are on compatible versions. Generally you want them on the same minor version (both 1.14.x for example). Running mismatched versions can cause wierd sync issues.
+Make sure your cloud and edge components are on compatible versions. Generally you want them on the same minor version (both 1.14.x for example). Running mismatched versions can cause weird sync issues.

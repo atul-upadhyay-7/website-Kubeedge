@@ -81,7 +81,7 @@ Yes, and this is actually how most people deploy it. KubeEdge is designed for th
 
 So you only need to open one port (default 10000 for WebSocket) in your cloud-side firewall. The edge side doesn't need any incoming ports opened.
 
-If you're using QUIC instead of WebSocket, you'd open port 10001 instead. And if you're running the certificate server seperately, that's another port (default 10002).
+If you're using QUIC instead of WebSocket, you'd open port 10001 instead. And if you're running the certificate server separately, that's another port (default 10002).
 
 One gotcha: if your NAT changes the source IP of outgoing connections, make sure CloudCore's advertise-address matches what the edge nodes see. Otherwise you'll get certificate errors.
 
